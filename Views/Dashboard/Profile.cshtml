@@ -1,0 +1,186 @@
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="dashboard-sidebar">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Profile" class="rounded-circle mb-2" width="80" height="80">
+                        <h5>Parth Doe</h5>
+                        <p style="color: #60a5fa;">Student</p>
+                    </div>
+                    <nav>
+                        <a asp-action="Index" class="sidebar-item">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                        <a asp-action="MyCourses" class="sidebar-item">
+                            <i class="fas fa-book me-2"></i>My Courses
+                        </a>
+                        <a asp-action="Profile" class="sidebar-item active">
+                            <i class="fas fa-user me-2"></i>Profile
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-certificate me-2"></i>Certificates
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-cog me-2"></i>Settings
+                        </a>
+                        <a asp-controller="Auth" asp-action="Login" class="sidebar-item">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <h1 class="mb-4">Profile Settings</h1>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="p-4">
+                                <h4 class="mb-4">Personal Information</h4>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" value="Parth">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" value="Doe">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" value="parth.doe@example.com">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="bio" class="form-label">Bio</label>
+                                            <textarea class="form-control" id="bio" rows="4" placeholder="Tell us about yourself...">Passionate learner interested in web development and data science. Always eager to learn new technologies and improve my skills.</textarea>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="location" class="form-label">Location</label>
+                                            <input type="text" class="form-control" id="location" value="San Francisco, CA">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="p-4">
+                                <h4 class="mb-4">Change Password</h4>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label for="currentPassword" class="form-label">Current Password</label>
+                                            <input type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="newPassword" class="form-label">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Change Password</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="p-4 text-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Profile" class="rounded-circle mb-3" width="120" height="120">
+                                <h5>Parth Doe</h5>
+                                <p style="color: #e2e8f0;">Student since March 2024</p>
+                                <button class="btn btn-outline w-100 mb-3">Change Photo</button>
+                                <div class="text-start">
+                                    <h6>Learning Stats</h6>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Courses Completed:</span>
+                                        <strong>3</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Total Learning Time:</span>
+                                        <strong>120 hours</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Certificates Earned:</span>
+                                        <strong>2</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Current Streak:</span>
+                                        <strong>7 days</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="p-4">
+                                <h6 class="mb-3">Achievements</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary p-2">
+                                        <i class="fas fa-trophy me-1"></i>First Course
+                                    </span>
+                                    <span class="badge bg-success p-2">
+                                        <i class="fas fa-fire me-1"></i>7 Day Streak
+                                    </span>
+                                    <span class="badge bg-warning p-2">
+                                        <i class="fas fa-star me-1"></i>Top Performer
+                                    </span>
+                                    <span class="badge bg-info p-2">
+                                        <i class="fas fa-graduation-cap me-1"></i>Quick Learner
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="p-4">
+                                <h6 class="mb-3">Notification Preferences</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                    <label class="form-check-label" for="emailNotifications">
+                                        Email Notifications
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="courseUpdates" checked>
+                                    <label class="form-check-label" for="courseUpdates">
+                                        Course Updates
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="promotions">
+                                    <label class="form-check-label" for="promotions">
+                                        Promotions & Offers
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-3">Save Preferences</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

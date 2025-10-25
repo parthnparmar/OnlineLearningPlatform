@@ -1,0 +1,199 @@
+@{
+    ViewData["Title"] = "My Courses";
+}
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="dashboard-sidebar">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Profile" class="rounded-circle mb-2" width="80" height="80">
+                        <h5>parth parmar</h5>
+                        <p class="text-muted">Student</p>
+                    </div>
+                    <nav>
+                        <a asp-action="Index" class="sidebar-item">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                        <a asp-action="MyCourses" class="sidebar-item active">
+                            <i class="fas fa-book me-2"></i>My Courses
+                        </a>
+                        <a asp-action="Profile" class="sidebar-item">
+                            <i class="fas fa-user me-2"></i>Profile
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-certificate me-2"></i>Certificates
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-cog me-2"></i>Settings
+                        </a>
+                        <a asp-controller="Auth" asp-action="Login" class="sidebar-item">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>My Courses</h1>
+                    <div class="btn-group">
+                        <button class="btn btn-outline active">All Courses</button>
+                        <button class="btn btn-outline">In Progress</button>
+                        <button class="btn btn-outline">Completed</button>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="course-image" style="height: 200px; background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0,0,0,0.5);">
+                                    <button class="btn btn-primary rounded-circle" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-primary">Web Development</span>
+                                    <span class="badge bg-warning">In Progress</span>
+                                </div>
+                                <h5>Complete Web Development Bootcamp</h5>
+                                <p class="text-muted">Master HTML, CSS, JavaScript, React, Node.js, and MongoDB.</p>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Progress</small>
+                                        <small>75%</small>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill">Continue Learning</button>
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="course-image" style="height: 200px; background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0,0,0,0.5);">
+                                    <button class="btn btn-primary rounded-circle" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-success">Data Science</span>
+                                    <span class="badge bg-info">In Progress</span>
+                                </div>
+                                <h5>Data Science & Machine Learning</h5>
+                                <p class="text-muted">Learn Python, pandas, scikit-learn, and TensorFlow.</p>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Progress</small>
+                                        <small>45%</small>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill">Continue Learning</button>
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="course-image" style="height: 200px; background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                                <div class="position-absolute top-0 end-0 m-3">
+                                    <i class="fas fa-check-circle text-success fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-warning">Marketing</span>
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                                <h5>Digital Marketing Mastery</h5>
+                                <p class="text-muted">Complete guide to SEO, social media marketing, and Google Ads.</p>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Progress</small>
+                                        <small>100%</small>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-success flex-fill">
+                                        <i class="fas fa-certificate me-2"></i>View Certificate
+                                    </button>
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-redo"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="course-image" style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0,0,0,0.5);">
+                                    <button class="btn btn-primary rounded-circle" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-info">Design</span>
+                                    <span class="badge bg-warning">In Progress</span>
+                                </div>
+                                <h5>UI/UX Design Fundamentals</h5>
+                                <p class="text-muted">Learn design principles, Figma, and user research methods.</p>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Progress</small>
+                                        <small>20%</small>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill">Continue Learning</button>
+                                    <button class="btn btn-outline">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a asp-controller="Courses" asp-action="Index" class="btn btn-outline">
+                        <i class="fas fa-plus me-2"></i>Browse More Courses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

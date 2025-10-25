@@ -1,0 +1,151 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1 class="fade-in-up">Learn Without Limits</h1>
+                <p class="fade-in-up">Discover thousands of courses from world-class instructors and advance your career with cutting-edge skills.</p>
+                <div class="d-flex gap-3 fade-in-up">
+                    <a asp-controller="Courses" asp-action="Index" class="btn btn-primary">Explore Courses</a>
+                    <a asp-controller="Auth" asp-action="Register" class="btn-outline">Start Learning</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Online Learning" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Why Choose EduVerse?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h4>Interactive Learning</h4>
+                    <p style="color: #e2e8f0;">Engage with interactive content, quizzes, and hands-on projects that make learning fun and effective.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Expert Instructors</h4>
+                    <p style="color: #e2e8f0;">Learn from industry professionals and subject matter experts with years of real-world experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Certified Learning</h4>
+                    <p style="color: #e2e8f0;">Earn recognized certificates upon completion to showcase your new skills to employers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: rgba(99, 102, 241, 0.05);">
+    <div class="container">
+        <h2 class="section-title">Featured Courses</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="course-badge">Bestseller</div>
+                    </div>
+                    <div class="p-4">
+                        <h5>Web Development Bootcamp</h5>
+                        <p style="color: #e2e8f0;">Master HTML, CSS, JavaScript, and React to build modern web applications.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">₹8299</span>
+                            <a asp-controller="Courses" asp-action="Details" asp-route-id="1" class="btn btn-primary btn-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="course-badge">New</div>
+                    </div>
+                    <div class="p-4">
+                        <h5>Data Science & Analytics</h5>
+                        <p style="color: #e2e8f0;">Learn Python, machine learning, and data visualization techniques.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">₹10799</span>
+                            <a asp-controller="Courses" asp-action="Details" asp-route-id="2" class="btn btn-primary btn-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="p-4">
+                        <h5>Digital Marketing Mastery</h5>
+                        <p style="color: #e2e8f0;">Comprehensive guide to SEO, social media, and online advertising.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">₹6599</span>
+                            <a asp-controller="Courses" asp-action="Details" asp-route-id="3" class="btn btn-primary btn-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Learning Statistics" class="img-fluid rounded-4">
+            </div>
+            <div class="col-lg-6">
+                <h2>Join Over 1 Million Learners</h2>
+                <p class="lead">Transform your career with skills that matter. Our platform has helped millions of students achieve their goals.</p>
+                <div class="row g-4 mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <h3 class="h1" style="color: var(--primary-color);">1M+</h3>
+                            <p class="text-info">Active Students</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <h3 class="h1" style="color: var(--secondary-color);">500+</h3>
+                            <p class="text-success">Expert Courses</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <h3 class="h1" style="color: var(--accent-color);">95%</h3>
+                            <p class="text-warning">Success Rate</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <h3 class="h1" style="color: var(--primary-color);">24/7</h3>
+                            <p class="text-primary">Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

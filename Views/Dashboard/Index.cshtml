@@ -1,0 +1,199 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="dashboard-sidebar">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Profile" class="rounded-circle mb-2" width="80" height="80">
+                        <h5>Parth parmar</h5>
+                        <p style="color: #60a5fa;">Student</p>
+                    </div>
+                    <nav>
+                        <a asp-action="Index" class="sidebar-item active">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                        <a asp-action="MyCourses" class="sidebar-item">
+                            <i class="fas fa-book me-2"></i>My Courses
+                        </a>
+                        <a asp-action="Profile" class="sidebar-item">
+                            <i class="fas fa-user me-2"></i>Profile
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-certificate me-2"></i>Certificates
+                        </a>
+                        <a href="#" class="sidebar-item">
+                            <i class="fas fa-cog me-2"></i>Settings
+                        </a>
+                        <a asp-controller="Auth" asp-action="Login" class="sidebar-item">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <div class="mb-4">
+                    <h1>Welcome back, Parth!</h1>
+                    <p style="color: #e2e8f0;">Continue your learning journey</p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="p-3">
+                                <div class="feature-icon mx-auto mb-2" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h4>5</h4>
+                                <p class="text-info mb-0">Enrolled Courses</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="p-3">
+                                <div class="feature-icon mx-auto mb-2" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>3</h4>
+                                <p class="text-success mb-0">Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="p-3">
+                                <div class="feature-icon mx-auto mb-2" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>2</h4>
+                                <p class="text-warning mb-0">Certificates</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="p-3">
+                                <div class="feature-icon mx-auto mb-2" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h4>120h</h4>
+                                <p class="text-primary mb-0">Learning Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="p-4">
+                                <h4 class="mb-4">Continue Learning</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex">
+                                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="Course" class="rounded me-3" width="80" height="60" style="object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h6>Web Development Bootcamp</h6>
+                                                <div class="progress mb-2" style="height: 6px;">
+                                                    <div class="progress-bar" style="width: 75%"></div>
+                                                </div>
+                                                <small class="text-success">75% Complete</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex">
+                                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="Course" class="rounded me-3" width="80" height="60" style="object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h6>Data Science Fundamentals</h6>
+                                                <div class="progress mb-2" style="height: 6px;">
+                                                    <div class="progress-bar" style="width: 45%"></div>
+                                                </div>
+                                                <small class="text-warning">45% Complete</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="p-4">
+                                <h4 class="mb-4">Recent Activity</h4>
+                                <div class="timeline">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-play text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Completed "JavaScript Functions" lesson</h6>
+                                            <small class="text-info">2 hours ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-trophy text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Earned "JavaScript Master" badge</h6>
+                                            <small class="text-info">1 day ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-book text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-1">Started "React Fundamentals" course</h6>
+                                            <small class="text-info">3 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="p-4">
+                                <h5 class="mb-3">Recommended for You</h5>
+                                <div class="mb-3">
+                                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         alt="Course" class="img-fluid rounded mb-2">
+                                    <h6>UI/UX Design Fundamentals</h6>
+                                    <p style="color: #e2e8f0;" class="small">Perfect next step after web development</p>
+                                    <a asp-controller="Courses" asp-action="Details" asp-route-id="4" class="btn btn-primary btn-sm">View Course</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="p-4">
+                                <h5 class="mb-3">Learning Streak</h5>
+                                <div class="text-center">
+                                    <div class="display-4 text-primary">7</div>
+                                    <p class="text-warning">Days in a row</p>
+                                    <p class="small text-success">Keep it up! You're on fire 🔥</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

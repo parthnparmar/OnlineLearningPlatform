@@ -1,0 +1,73 @@
+@model OnlineLearningPlatform300.Models.Quiz
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="p-5">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-clipboard-list fa-3x text-primary mb-3"></i>
+                            <h2>@Model.Title</h2>
+                            <p class="text-muted">@Model.Description</p>
+                            <p><strong>Passing Score:</strong> @Model.PassingScore% | <strong>Questions:</strong> @Model.Questions.Count</p>
+                        </div>
+
+                        <form asp-action="Submit" method="post">
+                            <input type="hidden" name="quizId" value="@Model.Id" />
+                            
+                            @for (int i = 0; i < Model.Questions.Count; i++)
+                            {
+                                var question = Model.Questions.ElementAt(i);
+                                <div class="question-card card mb-4">
+                                    <div class="p-4">
+                                        <h5 class="mb-3">Question @(i + 1) (@question.Points points)</h5>
+                                        <p class="lead">@question.Text</p>
+                                        
+                                        @if (question.Type == OnlineLearningPlatform300.Models.QuestionType.MultipleChoice)
+                                        {
+                                            @foreach (var answer in question.Answers)
+                                            {
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="answers[@question.Id]" value="@answer.Id" id="answer_@answer.Id">
+                                                    <label class="form-check-label" for="answer_@answer.Id">
+                                                        @answer.Text
+                                                    </label>
+                                                </div>
+                                            }
+                                        }
+                                        else if (question.Type == OnlineLearningPlatform300.Models.QuestionType.TrueFalse)
+                                        {
+                                            @foreach (var answer in question.Answers)
+                                            {
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="answers[@question.Id]" value="@answer.Id" id="answer_@answer.Id">
+                                                    <label class="form-check-label" for="answer_@answer.Id">
+                                                        @answer.Text
+                                                    </label>
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <textarea class="form-control" name="answers[@question.Id]" rows="3" placeholder="Enter your answer..."></textarea>
+                                        }
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Quiz
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

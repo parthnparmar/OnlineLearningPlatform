@@ -1,0 +1,79 @@
+@model IEnumerable<OnlineLearningPlatform300.Models.Lesson>
+@{
+    ViewData["Title"] = "Course Lessons";
+    var course = ViewBag.Course as OnlineLearningPlatform300.Models.Course;
+}
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="mb-4">
+                    <h1>@course?.Title</h1>
+                    <p class="text-muted">@course?.Description</p>
+                </div>
+
+                <div class="card">
+                    <div class="p-4">
+                        <h4 class="mb-4">Course Content</h4>
+                        @foreach (var lesson in Model)
+                        {
+                            <div class="lesson-item d-flex align-items-center p-3 mb-3 rounded" style="border: 1px solid rgba(255,255,255,0.1);">
+                                <div class="lesson-icon me-3">
+                                    @if (lesson.Type == OnlineLearningPlatform300.Models.LessonType.Video)
+                                    {
+                                        <i class="fas fa-play-circle text-primary fa-2x"></i>
+                                    }
+                                    else if (lesson.Type == OnlineLearningPlatform300.Models.LessonType.Quiz)
+                                    {
+                                        <i class="fas fa-question-circle text-warning fa-2x"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-file-text text-info fa-2x"></i>
+                                    }
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">@lesson.Title</h6>
+                                    <p class="text-muted mb-1">@lesson.Content</p>
+                                    <small class="text-muted">@lesson.Duration minutes • @lesson.Type</small>
+                                </div>
+                                <div>
+                                    <a asp-action="Details" asp-route-id="@lesson.Id" class="btn btn-primary btn-sm">
+                                        @if (lesson.Type == OnlineLearningPlatform300.Models.LessonType.Quiz)
+                                        {
+                                            <text>Take Quiz</text>
+                                        }
+                                        else
+                                        {
+                                            <text>Start Lesson</text>
+                                        }
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card position-sticky" style="top: 120px;">
+                    <div class="p-4">
+                        <h5>Course Progress</h5>
+                        <div class="progress mb-3" style="height: 10px;">
+                            <div class="progress-bar" style="width: 33%"></div>
+                        </div>
+                        <p class="text-muted">1 of 3 lessons completed</p>
+                        
+                        <h6 class="mt-4">Course Info</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-clock text-primary me-2"></i>@course?.Duration hours</li>
+                            <li class="mb-2"><i class="fas fa-signal text-primary me-2"></i>@course?.Level</li>
+                            <li class="mb-2"><i class="fas fa-tag text-primary me-2"></i>@course?.Category</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
