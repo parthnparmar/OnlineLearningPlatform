@@ -55,6 +55,8 @@ A modern, responsive online learning platform built with ASP.NET Core MVC, featu
 
 6. **Access the application**
    - Open browser and navigate to `https://localhost:` 
+7. Note
+   -create a mvc using dotnet new mvc (project name) and just copy the required files form the repo to the project
 ## Available Courses
 
 The platform includes 10 comprehensive courses:
