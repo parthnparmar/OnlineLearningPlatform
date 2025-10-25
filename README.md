@@ -154,6 +154,9 @@ dotnet run --environment Development
 ```bash
 dotnet publish -c Release -o ./publish
 ```
+
+
+
 ##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -163,9 +166,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Parth** - Full Stack Developer
 
 ##  Support
+
 For support and questions:
 - Email: support@eduverse.com
 - Phone: 8849811782
 
 **EduVerse** - Empowering minds through innovative online learning experiences.
-OUTPUT:
