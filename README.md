@@ -157,8 +157,6 @@ dotnet run --environment Development
 dotnet publish -c Release -o ./publish
 ```
 
-
-
 ##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -174,3 +172,29 @@ For support and questions:
 - Phone: 8849811782
 
 **EduVerse** - Empowering minds through innovative online learning experiences.
+OUTPUT:
+<img width="1911" height="1079" alt="Screenshot 2025-10-25 212320" src="https://github.com/user-attachments/assets/2626f113-cd91-4998-9157-439d6d4dde6a" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 212342" src="https://github.com/user-attachments/assets/527e85f9-e790-4f76-9173-39cc7aae7a7e" />
+<img width="1910" height="1078" alt="Screenshot 2025-10-25 212423" src="https://github.com/user-attachments/assets/416897c0-70ca-4630-8eb7-45800ce05627" />
+<img width="1919" height="1077" alt="Screenshot 2025-10-25 212543" src="https://github.com/user-attachments/assets/97883979-d94f-43b3-91b7-61f79e164e8d" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 212600" src="https://github.com/user-attachments/assets/9222a17d-1e11-4dc1-b578-4f5e7cf916cb" />
+<img width="916" height="1015" alt="Screenshot 2025-10-25 212634" src="https://github.com/user-attachments/assets/b72b1719-1fed-4e03-b3c5-8e1510f2f8a9" />
+<img width="34" height="19" alt="Screenshot 2025-10-25 212701" src="https://github.com/user-attachments/assets/16ab4952-b67e-4c51-94dc-a9ce3987578d" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 212718" src="https://github.com/user-attachments/assets/6dac97bf-ccdd-46fd-81bf-98687694c608" />
+<img width="1916" height="1079" alt="Screenshot 2025-10-25 212750" src="https://github.com/user-attachments/assets/34197ce8-bb46-47cd-8b47-2f530b117a99" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 212917" src="https://github.com/user-attachments/assets/c3299dc7-95e4-4557-9bde-46d0b2dbeb6c" />
+<img width="1909" height="1079" alt="Screenshot 2025-10-25 212959" src="https://github.com/user-attachments/assets/466060fe-3ec6-49f8-a106-b9cadd342d6a" />
+<img width="1915" height="1079" alt="Screenshot 2025-10-25 213120" src="https://github.com/user-attachments/assets/e9dd1a30-4ae6-404a-92c0-b617e6f669e6" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 213139" src="https://github.com/user-attachments/assets/a7821ce6-767e-483e-889f-914d0c8c397c" />
+<img width="1919" height="1079" alt="Screenshot 2025-10-25 213206" src="https://github.com/user-attachments/assets/6d0f2577-5821-488e-899d-0980877668c7" />
+<img width="1918" height="1079" alt="Screenshot 2025-10-25 214031" src="https://github.com/user-attachments/assets/ae84d59e-b24a-4583-b3b2-73a0d9b6ebde" />
+<img width="1576" height="743" alt="Screenshot 2025-10-25 222124" src="https://github.com/user-attachments/assets/f712227b-df47-4412-bf97-5bd1fb10dcf4" />
+
+
+
+
+
+
+
+
+
